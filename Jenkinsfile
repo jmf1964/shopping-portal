@@ -11,14 +11,14 @@ pipeline {
     stage('Test') {
       steps {
         echo 'this is the npm test'
-        sh 'uptime'
+        sh 'npm test'
       }
     }
 
     stage('Package') {
       steps {
         echo 'this is the Package job'
-        sh 'npm test'
+        sh 'npm run package'
       }
     }
 
